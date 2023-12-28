@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+        with:
+          repository: sahil101/github-actions/02%20Starting%20Project
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with: 
