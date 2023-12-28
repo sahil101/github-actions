@@ -7,7 +7,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
         with:
-          repository: sahil101/github-actions/02%20Starting%20Project
+          path: 02 Starting Project
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with: 
