@@ -6,8 +6,6 @@ jobs:
     steps:
     - name: Get code
       uses: actions/checkout@v3
-      with:
-        path: 'github-actions/starting-project'
 
     - name: Change Directory
       run: |
@@ -15,10 +13,7 @@ jobs:
     - name: Install NodeJS
       uses: actions/setup-node@v3
       with: 
-        node-version: 14  # Adjust the version as needed
-
-    - name: Update npm
-      run: npm install -g npm@latest
+        node-version: 18  # Adjust the version as needed
 
     - name: Install dependencies
       run: npm install
