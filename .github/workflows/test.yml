@@ -12,7 +12,7 @@ jobs:
     - name: know the path
       run: pwd
     - name: Change Directory
-      run: cd ./starting-project
+      run: cd ../starting-project
     - name: know the path
       run: pwd
     - name: Install NodeJS
