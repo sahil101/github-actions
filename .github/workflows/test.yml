@@ -4,15 +4,21 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
-        with:
-          path: 'starting-project'
-      - name: Install NodeJS
-        uses: actions/setup-node@v3
-        with: 
-          node-version: 18
-      - name: Install dependencies
-        run: npm ci
-      - name: Run tests
-        run: npm test
+    - name: Get code
+      uses: actions/checkout@v3
+      with:
+        path: 'starting-project'
+
+    - name: Install NodeJS
+      uses: actions/setup-node@v3
+      with: 
+        node-version: 14  # Adjust the version as needed
+
+    - name: Update npm
+      run: npm install -g npm@latest
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
