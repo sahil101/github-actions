@@ -7,6 +7,7 @@ jobs:
     - name: Get code
       uses: actions/checkout@v3
       with:
+        ref: 'master'
         repository: 'github-actions/starting-project'
         path: 'starting-project'
 
