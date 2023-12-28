@@ -8,8 +8,13 @@ jobs:
       uses: actions/checkout@v3
     - name: List all files
       run: ls -a
+
+    - name: know the path
+      run: pwd
     - name: Change Directory
       run: cd ./starting-project
+    - name: know the path
+      run: pwd
     - name: Install NodeJS
       uses: actions/setup-node@v3
       with: 
