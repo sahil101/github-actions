@@ -6,25 +6,30 @@ jobs:
     steps:
     - name: Get code
       uses: actions/checkout@v3
+
     - name: List all files
       run: ls -a
 
-    - name: know the path
-      run: pwd
-
-    - name: Change Directory
+    - name: Run Test
       run: |
         cd starting-project
         pwd
+        sudo apt-get update
+        sudo apt-get install -y nodejs
+        sudo apt-get install -y npm
+        node --version
+        npm --version
+        npm install
+        npm run test
 
-    - name: know the path
-      run: pwd
-    - name: Install NodeJS
-      uses: actions/setup-node@v3
-      with: 
-        node-version: 18  # Adjust the version as needed
-    - name: List all files
-      run: ls -a
+    # - name: know the path
+    #   run: pwd
+    # - name: Install NodeJS
+    #   uses: actions/setup-node@v3
+    #   with: 
+    #     node-version: 18  # Adjust the version as needed
+    # - name: List all files
+    #   run: ls -a
     # - name: Install dependencies
     #   run: npm install
 
