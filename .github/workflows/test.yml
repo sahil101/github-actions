@@ -6,13 +6,10 @@ jobs:
     steps:
     - name: Get code
       uses: actions/checkout@v3
-      with:
-        ref: 'master'
-        path: 'starting-project'
 
     - name: Change Directory
       run: |
-        cd github-actions/starting-project
+        cd starting-project
     - name: Install NodeJS
       uses: actions/setup-node@v3
       with: 
