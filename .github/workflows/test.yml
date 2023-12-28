@@ -7,8 +7,11 @@ jobs:
     - name: Get code
       uses: actions/checkout@v3
       with:
-        path: 'starting-project'
+        path: 'github-actions/starting-project'
 
+    - name: Change Directory
+      run: |
+        cd github-actions/starting-project
     - name: Install NodeJS
       uses: actions/setup-node@v3
       with: 
